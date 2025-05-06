@@ -19,11 +19,11 @@ import Layout from './components/Layout';
 import { getCurrentUser } from './services/api';
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
-
+/*
   useEffect(() => {
     const checkAuth = async () => {
       const token = localStorage.getItem('token');
@@ -48,7 +48,7 @@ const App = () => {
     
     checkAuth();
   }, []);
-  
+  */
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
